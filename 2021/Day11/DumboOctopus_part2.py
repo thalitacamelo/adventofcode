@@ -1,5 +1,3 @@
-import sys
-
 with open('input.txt', 'r') as file:
     energylevels = [list(map(int, line)) for line in file.read().split('\n')]
 

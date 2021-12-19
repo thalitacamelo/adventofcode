@@ -1,6 +1,3 @@
-import sys
-from typing import Awaitable
-
 with open('input.txt', 'r') as file:
     lines = list(filter(None, (line.rstrip() for line in file)))
     coordinates = []

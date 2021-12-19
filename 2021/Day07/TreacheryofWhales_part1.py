@@ -1,5 +1,3 @@
-import sys
-
 with open('input.txt', 'r') as file:
     positions = list(map(int, file.readline().split(',')))
 

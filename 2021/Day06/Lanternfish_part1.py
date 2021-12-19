@@ -1,5 +1,3 @@
-import sys
-
 with open('input.txt', 'r') as file:
     initial = map(int, file.readline().split(','))
 

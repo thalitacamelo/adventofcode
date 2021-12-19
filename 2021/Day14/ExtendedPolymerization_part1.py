@@ -1,5 +1,3 @@
-import sys
-
 with open('sample.txt', 'r') as file:
     template = file.readline().strip()
     file.readline()

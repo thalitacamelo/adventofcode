@@ -1,5 +1,3 @@
-import sys
-
 with open('input.txt', 'r') as file:
     edges = [tuple(line.split('-')) for line in file.read().split('\n')]
 

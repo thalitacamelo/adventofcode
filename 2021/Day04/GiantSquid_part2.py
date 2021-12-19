@@ -1,5 +1,3 @@
-import sys
-
 with open('input.txt', 'r') as file:
     # Declaration of variable numbers(chosen numbers), readline () return a list of numbers in the first line of sample.txt.
     numbers = file.readline().strip().split(sep=',')
