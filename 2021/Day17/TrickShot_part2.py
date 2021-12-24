@@ -17,7 +17,4 @@ for y in range(1, 200):
             vx = max(vx - 1, 0)
             vy -= 1
 
-max_vy = max(y for x, y in target_hits)
-max_y = max_vy * (max_vy + 1) // 2
-
-print(max_y)
+print(len(target_hits))
