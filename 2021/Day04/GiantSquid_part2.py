@@ -78,9 +78,11 @@ for number in numbers:
 
 
 last_number, last_winner_board = winners[-1]
+
+# Sum of the of all unmarked numbers on the winner board
 sum = 0
 for key in last_winner_board:
-    # Sum of the of all unmarked numbers on the winner board
     sum += int(key)
+    
 score = int(last_number) * sum
 print(score)

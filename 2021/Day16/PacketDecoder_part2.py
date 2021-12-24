@@ -7,13 +7,13 @@ with open('input.txt', 'r') as file:
 code_bin ={}
 with open('binarycode.txt', 'r') as file:
     for line in file:
-        hexadecimal, binary = line.split(' = ')
-        code_bin[hexadecimal] = binary.strip()
+        hexadecimal, binary_message = line.split(' = ')
+        code_bin[hexadecimal] = binary_message.strip()
 
-binary = ''
+binary_message = ''
 for hexa in message:
-    binary += (code_bin[hexa])
-binary = io.StringIO(binary)
+    binary_message += (code_bin[hexa])
+binary_message = io.StringIO(binary_message)
 
 def ID4 (string):
     i = int(string.read(1))
@@ -44,6 +44,7 @@ def read_packet (string):
                 subpackets.append(read_packet(string))
         return (typeID, subpackets)
 
+
 def calculate_expression (packet):
     typeID, subpackets = packet
     if typeID == 0:
@@ -63,7 +64,8 @@ def calculate_expression (packet):
     if typeID == 7:
         return 1 if calculate_expression(subpackets[0]) == calculate_expression(subpackets[1]) else 0
 
-packet = read_packet(binary)
+
+packet = read_packet(binary_message)
 value = calculate_expression(packet)
 
 print(value)
